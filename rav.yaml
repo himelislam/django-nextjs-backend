@@ -5,7 +5,9 @@ scripts:
     - cd src && python manage.py makemigrations
   migrate:
     - cd src && python manage.py migrate
+  shell:
+    - cd src && python manage.py shell
   curl_auth: |
     curl -X POST -H "Content-Type: application/json" -d '{"username": "himel", "password": "Himel@245"}' http://127.0.0.1:8001/api/token/pair
   curl_protect: |
-    curl -X GET -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzM3NDAxMTcxLCJpYXQiOjE3Mzc0MDA4NzEsImp0aSI6IjM2NzA5MTMzNDE4NjRmYWFiYzMyNTlkYTg5ZmRkYjlkIiwidXNlcl9pZCI6MX0.2y9lBR6u2dhJgcnSsDpWVJUNLxVoSTR9ikgnqhYOKRA" http://127.0.0.1:8001/api/me 
+    curl -X GET -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzM3NDk0MTg5LCJpYXQiOjE3Mzc0OTA1ODksImp0aSI6ImMzNjEzMDBmOTRjMjQzNWFhNjUwYzRiNGVhMDViZjJlIiwidXNlcl9pZCI6MX0.vayn-XQbQkmgaciLDtDK07RH1dTS1e1WhVfB8lNOqPo" http://127.0.0.1:8001/api/me 

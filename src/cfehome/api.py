@@ -14,7 +14,7 @@ class UserSchema(Schema):
     email: str = None
 
 class MemberSchema(Schema):
-    name: str
+    name: str 
     phone: int
     status: bool
 
